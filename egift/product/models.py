@@ -20,3 +20,22 @@ class Country(models.Model):
 
     class Meta:
         db_table = "country"
+
+class Course(models.Model):
+    course_name = models.CharField(max_length=25)
+    course_duration = models.CharField(max_length=25)
+    course_fee = models.FloatField()
+    class Meta:
+        db_table = "course"
+        
+        
+        
+class Student(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    sname = models.CharField(max_length=25)
+    semail = models.CharField(max_length=25)
+    sage = models.IntegerField()
+    
+    class Meta:
+        db_table = "student"
+    
