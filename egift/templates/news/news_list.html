@@ -1,0 +1,16 @@
+{{news_list}}
+<table>
+  <tr>
+    <th>TITLE</th>
+    <th>DESCRIPTION</th>
+    <th>DATE</th>
+  </tr>
+  {% for i in news_list %}
+  <tr>
+    <td>{{i.title}}</td>
+    <td>{{i.description}}</td>
+    <td>{{i.publishDate}}</td>
+  </tr>
+
+  {% endfor %}
+</table>
