@@ -1,16 +1,29 @@
-{{news_list}}
-<table>
-  <tr>
-    <th>TITLE</th>
-    <th>DESCRIPTION</th>
-    <th>DATE</th>
-  </tr>
-  {% for i in news_list %}
-  <tr>
-    <td>{{i.title}}</td>
-    <td>{{i.description}}</td>
-    <td>{{i.publishDate}}</td>
-  </tr>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"/>
 
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">TITLE</th>
+      <th scope="col">DESCRIPTION</th>
+      <th scope="col">DATE</th>
+      <th scope="col">ACTION</th>
+    </tr>
+  </thead>
+  {% for i in news_list %}
+  <tbody>
+    <tr>
+      <th scope="row">{{i.id}}</th>
+      <td>{{i.title}}</td>
+      <td>{{i.description}}</td>
+      <td>{{i.publishDate}}</td>
+      <td>
+        <td><a href = "{% url 'news_delete' i.pk%}">DELETE {{i.id}}</a></td>
+      </td>
+
+    </tr>
+  </tbody>
   {% endfor %}
 </table>
