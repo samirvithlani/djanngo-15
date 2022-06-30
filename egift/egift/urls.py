@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('product/',include("product.urls")),
     path('blog/',include('blog.urls')),
-    path('cbv/',include('cbv.urls'))
+    path('cbv/',include('cbv.urls')),
+    path('sf/',include('simpleforms.urls'))
 
 ]

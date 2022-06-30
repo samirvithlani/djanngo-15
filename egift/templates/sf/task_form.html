@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+
+<form method="post">
+  {% csrf_token %} 
+
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-0">
+      {{form.task_name |as_crispy_field}}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-0">
+      {{form.task_time |as_crispy_field}}
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6 mb-0">
+      {{form.task_description |as_crispy_field}}
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+{% endblock content %}
