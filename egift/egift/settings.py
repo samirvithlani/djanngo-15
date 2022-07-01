@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'cbv',
     'simpleforms',
     'crispy_forms',
+    'userApp',
     
 ]
+AUTH_USER_MODEL = 'userApp.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

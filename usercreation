@@ -1,0 +1,23 @@
+UserApp
+ext AbstractUser
+
+models.py -->
+
+setting.py ->
+
+AUTH_USER_MODEL ="userApp.User"
+
+
+remove admi entry from installed app....
+remove admin entry from urls.py 
+
+makemigration
+migrate
+
+forms.py
+
+userForm(forms.MOdelForm):
+
+	password = 
+	class Meta
+	model =** User ** --> User

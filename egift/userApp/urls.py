@@ -15,13 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('product/',include("product.urls")),
-    path('blog/',include('blog.urls')),
-    path('cbv/',include('cbv.urls')),
-    path('sf/',include('simpleforms.urls')),
-    path('user/',include('userApp.urls'))
-
+    
+    path('create/',views.BaseRegisterView.as_view(),name='create'),
 ]
