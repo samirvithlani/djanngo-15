@@ -23,5 +23,6 @@ urlpatterns = [
     path('cbv/',include('cbv.urls')),
     path('sf/',include('simpleforms.urls')),
     path('user/',include('userApp.urls'))
+    
 
 ]

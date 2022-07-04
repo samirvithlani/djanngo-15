@@ -58,6 +58,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'egift.urls'
+LOGIN_REDIRECT_URL = '/user/profile'
 
 TEMPLATES = [
     {

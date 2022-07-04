@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import FormView
+from django.contrib.auth.views import LoginView, LogoutView
 
 from .forms import UserForm
 
@@ -15,3 +16,10 @@ class BaseRegisterView(FormView):
         user.set_password = form.cleaned_data['password']
         user.save()
         return super().form_valid(form)
+
+class UserLoginView(LoginView):
+    template_name = "userApp/login.html"
+    success_url ="/"
+
+def profile(request):
+    return render(request, "userApp/profile.html")        

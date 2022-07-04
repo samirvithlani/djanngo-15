@@ -20,4 +20,6 @@ from . import views
 urlpatterns = [
     
     path('create/',views.BaseRegisterView.as_view(),name='create'),
+    path('login/',views.UserLoginView.as_view(),name='login'),
+    path('profile/',views.profile,name='profile'),
 ]
