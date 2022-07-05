@@ -38,4 +38,19 @@ class Student(models.Model):
     
     class Meta:
         db_table = "student"
+
+
+class Demo(models.Model):
+     username = models.CharField(max_length = 99, unique = True)
+     profile_pic = models.ImageField(upload_to = "profile_pic", default="profile_pic/p1.jpg")
+     
+     
+     
+     @property
+     def imageURL(self):
+        try:
+            url = self.profile_pic.url
+        except:
+            url = ''
+        return url
     

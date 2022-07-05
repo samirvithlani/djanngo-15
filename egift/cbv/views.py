@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView,DetailView
 from django.views.generic.edit import CreateView,DeleteView
 
-from .models import News
+from .models import Event, News
 
 
 # Create your views here.
@@ -29,5 +29,9 @@ class NewsDeleteView(DeleteView):
     template_name = "news/news_delete.html"
     success_url = "/cbv/newslist/"
     
-        
+class EvenetCreateView(CreateView):
+    model =Event
+    template_name = "news/event.html"
+    success_url ="/"
+    fields = "__all__"
         

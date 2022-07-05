@@ -2,6 +2,7 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 
 from .models import *
 
@@ -27,3 +28,10 @@ def index1(request):
     print(students1)
     
     return HttpResponse("ok")
+
+class DemoCreateView(CreateView):
+    model  =Demo
+    fields = ['username','profile_pic']
+    template_name = "demo.html"
+    success_url = "/"
+    
