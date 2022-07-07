@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'egift.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'internship-15',
+        'NAME': 'internship-16',
         'USER':'postgres',
         'PASSWORD':'postgres',
         'HOST':'localhost',
@@ -149,3 +149,12 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'Bootstrap'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'pythonforsamir@gmail.com'
+EMAIL_HOST_PASSWORD = 'oysvzzarotichndt'
+

@@ -22,4 +22,6 @@ urlpatterns = [
     path('create/',views.BaseRegisterView.as_view(),name='create'),
     path('login/',views.UserLoginView.as_view(),name='login'),
     path('profile/',views.profile,name='profile'),
+    path('sendMail/',views.sendMail,name='sendMail'),
+    path('logout/',views.LogoutView.as_view(template_name ="userApp/login.html"),name='logout'),
 ]
